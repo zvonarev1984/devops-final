@@ -1,0 +1,13 @@
+---
+- name: Configurations to "web-server" host
+  hosts: web-server
+  remote_user: ubuntu
+  become: yes
+  roles:
+    - common
+- name: Copy "docker" folder on server
+  hosts: web-server
+  remote_user: ubuntu
+  become: yes
+  roles:
+    - nginx-docker
