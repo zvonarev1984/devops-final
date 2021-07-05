@@ -1,6 +1,6 @@
 ---
 # cp ~/ansible/prod/../docker/* /tmp/nginx-tmp
-- name: copy_docker_to_folder
+- name: Copy docker to folder
   copy:
     src: "{{ playbook_dir }}/../docker/"
     dest: "{{ docker_remote_app_dir }}"
@@ -9,7 +9,7 @@
     - nginx-docker
 
 # cd /tmp/nginx-tmp/ && docker-compose up -d --build
-- name: rebuild_images_defined_in_compose_file_and_restart_containers
+- name: Rebuild images defined in compose file and restart containers
   command: docker-compose up -d --build
   changed_when: false
   args:
