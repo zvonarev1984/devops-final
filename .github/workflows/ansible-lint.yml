@@ -1,9 +1,9 @@
-name: Check playbok on ansible Lint 
+name: Check ansible playbook with ansible Lint 
 
 on: [push, pull_request]
 
 jobs:
-  build:
+  Check ansible playbook with ansible Lint:
     runs-on: ubuntu-latest
     steps:
     # Important: This sets up your GITHUB_WORKSPACE environment variable
@@ -20,7 +20,7 @@ jobs:
         # targets: |
         #   playbook_1.yml
         #   playbook_2.yml
-        targets: "./"
+        targets: "ansible/prod/*.yml"
         # [optional]
         # Arguments to be passed to the ansible-lint
 
