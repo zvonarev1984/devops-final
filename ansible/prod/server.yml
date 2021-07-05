@@ -10,4 +10,4 @@
   remote_user: ubuntu
   become: yes
   roles:
-    - nginx-docker
+    - nginx_docker
