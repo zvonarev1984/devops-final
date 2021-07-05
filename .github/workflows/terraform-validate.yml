@@ -1,9 +1,6 @@
-name: Validate changes
+name: Validate changes terraform
 
-on:
-  push:
-    branches:
-      - '!master'
+on:[push, pull_request]
 
 jobs:
   fmt-check:
