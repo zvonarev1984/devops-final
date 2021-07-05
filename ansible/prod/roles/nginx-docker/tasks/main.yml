@@ -4,6 +4,7 @@
   copy:
     src: "{{ playbook_dir }}/../docker/"
     dest: "{{ docker_remote_app_dir }}"
+    mode: 0755
   tags:
     - nginx-docker
 
