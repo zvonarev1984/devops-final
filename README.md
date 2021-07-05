@@ -13,39 +13,3 @@
 1. Для запуска создания ВМ на amazon необходимо выполнить команду terraform apply
 2. Для конфигурирования веб-сервера на запущенной ноде необходим выполнить команду:
    ansible-playbook prod/server.yml -i prod/hosts.yml
-
-Структура проекта:
-
-Task_Final/
-├── README.md
-├── ansible
-│   ├── docker
-│   │   ├── docker-compose.yml
-│   │   └── nginx
-│   │       ├── Dockerfile
-│   │       ├── README.md
-│   │       ├── nginx-conf
-│   │       │   ├── default.conf
-│   │       │   └── nginx.conf
-│   │       ├── nginx-server.sh
-│   │       └── site
-│   │           └── index.html
-│   └── prod
-│       ├── host_vars
-│       │   └── web-server
-│       ├── hosts.yml
-│       ├── roles
-│       │   ├── common
-│       │   │   ├── handlers
-│       │   │   │   └── main.yml
-│       │   │   └── tasks
-│       │   │       ├── docker.yml
-│       │   │       └── main.yml
-│       │   └── nginx_docker
-│       │       └── tasks
-│       │           └── main.yml
-│       └── server.yml
-└── terraform-ec2
-    ├── main.tf
-    ├── output.tf
-    └── variables.tf
